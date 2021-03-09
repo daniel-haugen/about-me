@@ -19,11 +19,11 @@ if (guess1 === 'yes' || guess1 === 'y' || guess1 === 'ye') {
 let guess2 = prompt(q2 + ' Yes or no?').toLowerCase();
 
 if (guess2 === 'yes' || guess2 === 'y' || guess2 === 'ye') {
+  console.log('nope, nice try...');
+  alert('nope, nice try...');
+} else {
   console.log('you guessed right!');
   alert('you guessed right!');
-} else {
-  console.log('nice try...');
-  alert('nice try...');
 }
 
 let guess3 = prompt(q3 + ' Yes or no?').toLowerCase();
@@ -59,3 +59,4 @@ if (guess5 === 'yes' || guess5 === 'y' || guess5 === 'ye') {
 let username = prompt(q6);
 
 alert('Welcome to my website ' + username + '.');
+document.getElementsbyId('welcome').textContent = 'hello ' + username + '.';
