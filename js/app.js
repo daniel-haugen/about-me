@@ -1,4 +1,6 @@
 'use strict';
+
+// Define questions
 let q1 = 'Does Daniel still watch VHS tapes?';
 let q2 = 'Is Daniel taller than 6 feet?';
 let q3 = 'Does Daniel have a dog?';
@@ -58,5 +60,6 @@ if (guess5 === 'yes' || guess5 === 'y' || guess5 === 'ye') {
 
 let username = prompt(q6);
 
-alert('Welcome to my website ' + username + '.');
-document.getElementById('welcome').textContent = 'Hello ' + username + '! Welcome to my website.';
+// Add a welcome message on page for user
+alert(`Welcome to my website ${username}`;
+document.getElementById('welcome').textContent = `Hello ${username}! Welcome to my website.`;
