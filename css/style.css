@@ -1,15 +1,19 @@
-h1 {
+body {
     font-family: helvetica;
+    font-size: 22px;
+}
+
+h1 {
     font-weight: 800;
     font-size: 150px;
     margin: 20px 0px 0px 100px;
 }
 
 h2 {
-    font-family: helvetica;
     font-size: 50px;
-    margin-top: 30px;
+    font-weight: bold;
 }
+
 
 ul {
     list-style-type: square;
@@ -19,15 +23,46 @@ ul {
     display: grid;
     place-items: center;
     background-color: grey;
-    height: 5vh;
+    height: 75px;
     width: 100%;
 }
 
 #welcome {
-
     font-family: arial;
     font-size: 30px;
     text-align: center;
     top: 0;
+}
 
+.redcard {
+    width: 500px;
+    height: 400px;
+    margin-left: 2vw;
+    margin-top: 50px;
+    background-color: lightcoral;
+    clip-path: circle(200px);
+}
+
+.bubble-card {
+    position: relative;
+    width: 65%;
+    height: 50%;
+    top: 30%;
+    left: 30%;
+}
+
+.bluecard {
+    width: 500px;
+    height: 400px;
+    margin-left: 40vw;
+    background-color: lightcyan;
+    clip-path: circle(200px);
+}
+
+.greencard {
+    width: 500px;
+    height: 400px;
+    margin-left: 2vw;
+    background-color: lightgreen;
+    clip-path: circle(200px);
 }
