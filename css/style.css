@@ -1,9 +1,33 @@
 h1 {
-   font-family: helvetica, sans-serif;
-   font-weight: 800;
-   font-size: 100px;
+    font-family: helvetica;
+    font-weight: 800;
+    font-size: 150px;
+    margin: 20px 0px 0px 100px;
+}
+
+h2 {
+    font-family: helvetica;
+    font-size: 50px;
+    margin-top: 30px;
 }
 
 ul {
-    list-style-type: circle;
+    list-style-type: square;
+}
+
+.welcome {
+    display: grid;
+    place-items: center;
+    background-color: grey;
+    height: 5vh;
+    width: 100%;
+}
+
+#welcome {
+
+    font-family: arial;
+    font-size: 30px;
+    text-align: center;
+    top: 0;
+
 }
