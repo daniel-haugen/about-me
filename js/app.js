@@ -59,4 +59,4 @@ if (guess5 === 'yes' || guess5 === 'y' || guess5 === 'ye') {
 let username = prompt(q6);
 
 alert('Welcome to my website ' + username + '.');
-document.getElementsbyId('welcome').textContent = 'hello ' + username + '.';
+document.getElementById('welcome').textContent = 'Hello ' + username + '! Welcome to my website.';
