@@ -61,5 +61,28 @@ if (guess5 === 'yes' || guess5 === 'y' || guess5 === 'ye') {
 let username = prompt(q6);
 
 // Add a welcome message on page for user
-alert(`Welcome to my website ${username}`;
+alert(`Welcome to my website ${username}`);
 document.getElementById('welcome').textContent = `Hello ${username}! Welcome to my website.`;
+
+
+let age = prompt('How old are you?');
+
+switch (age) {
+case (age < 25):
+  console.log('You\'re so young!');
+  break;
+
+case (age === 25):
+  console.log('You\'re 25 years old!');
+  break;
+
+case (age > 25):
+  console.log('You\'re older than 25 years old!');
+  break;
+
+default:
+  console.log('you broke it');
+  break;
+}
+
+
