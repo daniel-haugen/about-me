@@ -12,3 +12,8 @@ The about me lab's assignment is to build a web page that quizzes the user with 
 - CSS layout and positioning is strange. Especially getting text to wrap a certain way within other divs.
 - Overall it took me maybe 1-2 hours to get the javascript portion sorted out. The rest was just battling with CSS until I became too frustrated. 
 - It is `getElementById` and not `getElementbyId` (1 hour mistake)
+
+### Pair Programming
+Navigator: Daniel Haugen<br/>
+Driver: [Sammy Antigua](https://github.com/samiami83)<br/>
+- We worked on Daniel's code together.
