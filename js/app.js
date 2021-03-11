@@ -8,7 +8,9 @@ let q = ['Does Daniel still watch VHS tapes?',
   'Did Daniel brush his teeth today?',
   'Final question... What\'s your name?'];
 
+// Variable to track how many answers they get right
 let rightAnswers= 0;
+
 
 let guess1 = prompt(q[0] + ' Yes or no?').toLowerCase();
 
@@ -72,20 +74,24 @@ let numAnswer = 6;
 
 //Loop through 4 times
 for (let i = 0; i < 4; i++) {
-  let numGuess = prompt('Can you guess my number? Don\'t spell it out! You\'ve got 4 chances...');
-  let int = parseInt(numGuess);
-  if (int < numAnswer) {
+
+  //Ask for their number guess and turn into integer
+  let numGuess = parseInt(prompt('Can you guess my number? It\'s between 1 and 10. Don\'t spell it out! You\'ve got 4 chances...'));
+
+  // Respond whether the guess is too high or too low
+  if (numGuess < numAnswer) {
     console.log('You\'re guess is too low');
     alert('You\'re guess is too low');
-  } else if (int > numAnswer) {
+  } else if (numGuess > numAnswer) {
     console.log('You\'re guess is too high ');
     alert('You\'re guess is too high ');
-  } else {
+  } else if (numGuess === numAnswer) {
     console.log('You\'ve got it!');
     alert('You got the right answer!');
     rightAnswers++;
-    //if they get the right answer, rightAnswers is incremented by 1
     break;
+  } else {
+    alert('are you trying to break it?');
   }
   if (i === 3) {
     console.log('you failed horribly');
@@ -97,22 +103,23 @@ for (let i = 0; i < 4; i++) {
 let numAnswer2 = [5,9,4];
 let correct = false;
 
-//Loop through 6 times
+//Loop through 6 times for 6 guess attempts
 for (let i = 0; i < 6; i++) {
 
-  //take the guess
-  let numGuess2 = prompt('Can you guess my NEW number between 1-10? Don\'t spell it out! You\'ve got 6 chances this time...');
-  //convert the type of the guess
-  let int2 = parseInt(numGuess2);
+  //take the guess and convert into integer
+  let numGuess2 = parseInt(prompt('Can you guess my NEW number between 1-10? Don\'t spell it out! You\'ve got 6 chances this time...'));
+
   // loop through the array and evaluate if the guess is equal to a number in the array
   for (let j = 0; j < numAnswer2.length; j++) {
-    if (numAnswer2[j] === int2) {
+    //if a member of the array matches the guess, update correct variable and increment rightAnswers
+    if (numAnswer2[j] === numGuess2) {
       console.log('you got it!');
       correct = true;
       rightAnswers++;
       break;
     }
   }
+  //if it leaves the second for loop and correct hasn't been switched to true, it repeats the first for loop.
   if (correct === true) {
     alert(`You got a total of ${rightAnswers} questions right`);
     break;
@@ -120,13 +127,16 @@ for (let i = 0; i < 6; i++) {
     alert('incorrect answer');
   }
 }
+//once it leaves the entire for loop, 'correct' is used to identify whether or not they were succesful in guessing the number.
 if (correct !== true) {
   console.log('sorry you got it wrong');
   alert(`the correct answers were: ${numAnswer2}. You got a total of ${rightAnswers} questions right out of seven total`);
 }
 
+//prompt for user's name
 let username = prompt(q[5]);
 
+//if username is empty, fill it with 'Stranger'
 if (!username) {
   username = 'Stranger';
 }
