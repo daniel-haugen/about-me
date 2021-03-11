@@ -125,24 +125,12 @@ if (correct !== true) {
   alert(`the correct answers were: ${numAnswer2}. You got a total of ${rightAnswers} questions right`);
 }
 
+let username = prompt(q[5]);
 
+if (!username) {
+  username = 'Stranger';
+}
 
-
-
-
-
-
-
-
-
-
-
-// let username = prompt(q[5]);
-
-// if (!username) {
-//   username = 'Stranger';
-// }
-
-// // Add a welcome message on page for user
-// alert(`Welcome to my website ${username}`);
-// document.getElementById('welcome').textContent = `Hello ${username}! Welcome to my website.`;
+// Add a welcome message on page for user
+alert(`Welcome to my website ${username}`);
+document.getElementById('welcome').textContent = `Hello ${username}! Welcome to my website.`;
