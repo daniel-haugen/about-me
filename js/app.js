@@ -101,7 +101,7 @@ let correct = false;
 for (let i = 0; i < 6; i++) {
 
   //take the guess
-  let numGuess2 = prompt('Can you guess my NEW number between 1-10? Don\'t spell it out! You\'ve got 6 chances...');
+  let numGuess2 = prompt('Can you guess my NEW number between 1-10? Don\'t spell it out! You\'ve got 6 chances this time...');
   //convert the type of the guess
   let int2 = parseInt(numGuess2);
   // loop through the array and evaluate if the guess is equal to a number in the array
@@ -122,7 +122,7 @@ for (let i = 0; i < 6; i++) {
 }
 if (correct !== true) {
   console.log('sorry you got it wrong');
-  alert(`the correct answers were: ${numAnswer2}. You got a total of ${rightAnswers} questions right`);
+  alert(`the correct answers were: ${numAnswer2}. You got a total of ${rightAnswers} questions right out of seven total`);
 }
 
 let username = prompt(q[5]);
