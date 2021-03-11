@@ -84,7 +84,7 @@ for (let i = 0; i < 4; i++) {
     console.log('You\'ve got it!');
     alert('You got the right answer!');
     rightAnswers++;
-    //if they get the right answer, correct is incremented by 1
+    //if they get the right answer, rightAnswers is incremented by 1
     break;
   }
   if (i === 3) {
@@ -114,7 +114,7 @@ for (let i = 0; i < 6; i++) {
     }
   }
   if (correct === true) {
-    alert(`You got a total of ${rightAnswers} questions right`)
+    alert(`You got a total of ${rightAnswers} questions right`);
     break;
   } else {
     alert('incorrect answer');
