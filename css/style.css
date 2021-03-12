@@ -88,7 +88,7 @@ ol {
 .redcard {
     width: 600px;
     height: 600px;
-    margin: 20px 35% 0 0;
+    margin: 50px 35% 0 0;
     background-color: lightcoral;
     clip-path: circle(50%);
     z-index: 6; 
