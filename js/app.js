@@ -173,3 +173,42 @@ function userName() {
 }
 userName();
 
+
+
+// Attempt to make your code more DRY by putting all of the questions, answers, and responses to
+// the first five yes/no questions into arrays (or even one huge multidimensional array),
+// and modifying the game logic such that a ‘for’ loop will control the flow from
+// question to question.
+
+
+// // Trivia Game Two!!!
+// function arrayIterateTrivia() {
+
+//   let q = ['Which is better? Sky? Or dirt?',
+//     'Is the color yellow better than red?',
+//     'Was I nominated for a Grammy Award in 2020?'
+//   ];
+//   let r = [];
+//   let a = ['sky', 'no', 'yes'];
+//   let correctAnswers = 0;
+
+//   for (let k = 0; k < q.length; k++) {
+//     let guess = prompt(q[k]).toLowerCase();
+//     r.push(guess);
+//   }
+
+//   for (let i = 0; i < q.length; i++) {
+//     if (r[i] === a[i]) {
+//       console.log('correct guess');
+//       correctAnswers++;
+//     } else {
+//       console.log('incorrect guess');
+//     }
+//   }
+
+//   alert(`You got ${correctAnswers}/3. Nice job...`);
+// }
+
+// arrayIterateTrivia();
+
+
