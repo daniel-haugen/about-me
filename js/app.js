@@ -13,7 +13,6 @@ let rightAnswers= 0;
 
 function vhs() {
   let guess1 = prompt(q[0] + ' Yes or no?').toLowerCase();
-
   if (guess1 === 'yes' || guess1 === 'y' || guess1 === 'ye') {
   //   console.log('you guessed right!');
     alert('you guessed right!');
@@ -85,21 +84,22 @@ teeth();
 //NUMBER GAME #1!!!!
 function gameOne() {
   let numAnswer = 6;
-
-
+  let attempts = 4;
   //Loop through 4 times
   for (let i = 0; i < 4; i++) {
 
     //Ask for their number guess and turn into integer
-    let numGuess = parseInt(prompt('Can you guess my number? It\'s between 1 and 10. Don\'t spell it out! You\'ve got 4 chances...'));
+    let numGuess = parseInt(prompt(`Can you guess my number? It's between 1 and 10. Don't spell it out! You've got ${attempts} chances...`));
 
     // Respond whether the guess is too high or too low
     if (numGuess < numAnswer) {
       console.log('You\'re guess is too low');
       alert('You\'re guess is too low');
+      attempts--;
     } else if (numGuess > numAnswer) {
       console.log('You\'re guess is too high ');
       alert('You\'re guess is too high ');
+      attempts--;
     } else if (numGuess === numAnswer) {
       console.log('You\'ve got it!');
       alert('You got the right answer!');
@@ -107,6 +107,7 @@ function gameOne() {
       break;
     } else {
       alert('are you trying to break it?');
+      attempts--;
     }
     if (i === 3) {
       console.log('you failed horribly');
@@ -121,12 +122,13 @@ gameOne();
 function gameTwo() {
   let numAnswer2 = [5,9,4];
   let correct = false;
+  let attempts = 6;
 
   //Loop through 6 times for 6 guess attempts
   for (let i = 0; i < 6; i++) {
 
     //take the guess and convert into integer
-    let numGuess2 = parseInt(prompt('Can you guess my NEW number between 1-10? Don\'t spell it out! You\'ve got 6 chances this time...'));
+    let numGuess2 = parseInt(prompt(`Can you guess my NEW number between 1-10? You've got ${attempts} chances this time...`));
 
     // loop through the array and evaluate if the guess is equal to a number in the array
     for (let j = 0; j < numAnswer2.length; j++) {
@@ -144,6 +146,7 @@ function gameTwo() {
       break;
     } else {
       alert('incorrect answer');
+      attempts--;
     }
   }
   //once it leaves the entire for loop, 'correct' is used to identify whether or not they were succesful in guessing the number.
