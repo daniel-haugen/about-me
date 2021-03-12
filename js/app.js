@@ -85,6 +85,7 @@ teeth();
 function gameOne() {
   let numAnswer = 6;
   let attempts = 4;
+
   //Loop through 4 times
   for (let i = 0; i < 4; i++) {
 
@@ -128,7 +129,7 @@ function gameTwo() {
   for (let i = 0; i < 6; i++) {
 
     //take the guess and convert into integer
-    let numGuess2 = parseInt(prompt(`Can you guess my NEW number between 1-10? You've got ${attempts} chances this time...`));
+    let numGuess2 = parseInt(prompt(`Can you guess my NEW number between 1-10? You've got ${attempts} chances...`));
 
     // loop through the array and evaluate if the guess is equal to a number in the array
     for (let j = 0; j < numAnswer2.length; j++) {
