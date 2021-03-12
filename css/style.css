@@ -21,6 +21,11 @@ ul {
     list-style-type: square;
 }
 
+ol {
+    list-style-type: decimal;
+    line-height: 1.5;
+}
+
 /* Top Banner */
 
 .welcome {
@@ -58,11 +63,25 @@ ul {
 
 /* text control for bubbles */
 .bubble-card {
+    height: 100%;
+    width: 75%;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0%;
+    align-items: center ;
+    justify-content: space-evenly;
     flex-direction: column;
-    margin-top: 30%;
+}
+
+.bubble-card>p {
+    position: relative;
+    bottom: 50px;
+}
+
+.bubble-card>ul {
+    position: relative;
+    bottom: 120px;
+    padding: 5px 50px;
 }
 
 /* Bubbles! */
@@ -114,6 +133,15 @@ ul {
     justify-content: center;
     align-items: center;
     padding-top: 30px;
-    height: 400px;
+    height: auto;
     background-color: rgb(197, 136, 255);
+}
+
+.bandheading {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.top10>ol {
+    margin-bottom: 60px;
 }
