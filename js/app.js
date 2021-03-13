@@ -84,15 +84,12 @@ function gameOne() {
 
     // Respond whether the guess is too high or too low
     if (numGuess < numAnswer) {
-      console.log('You\'re guess is too low');
       alert('You\'re guess is too low');
       attempts--;
     } else if (numGuess > numAnswer) {
-      console.log('You\'re guess is too high ');
       alert('You\'re guess is too high ');
       attempts--;
     } else if (numGuess === numAnswer) {
-      console.log('You\'ve got it!');
       alert('You got the right answer!');
       rightAnswers++;
       break;
@@ -101,7 +98,6 @@ function gameOne() {
       attempts--;
     }
     if (i === 3) {
-      console.log('you failed horribly');
       alert(`Nice try. The correct answer was ${numAnswer}`);
     }
   }
