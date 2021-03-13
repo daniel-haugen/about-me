@@ -1,3 +1,22 @@
+:root {
+    --bsize: 35vw;
+    --mbsize: 500px;
+    --b1color: rgb(240, 226, 204);
+    --b2color: rgb(220, 220, 220);
+    --welcome: rgb(194, 194, 194);
+    --heading: #158467;
+    --body: #065446;
+    --top10: #158467; 
+}
+
+/* 
+Colors:
+tan - #fadcac 
+lightest green - #158467
+middle green - #197163
+dark green - #065446
+*/
+
 
 /* ELEMENTS */
 
@@ -9,11 +28,14 @@ body {
 h1 {
     font-weight: 800;
     font-size: 100px;
+    padding: 20px 0;
+    color: white;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 35px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 
@@ -29,35 +51,33 @@ ol {
 /* Top Banner */
 
 .welcome {
+    background-color: var(--welcome);
+    height: 75px;
     display: grid;
     place-items: center;
-    background-color: grey;
-    height: 75px;
-    width: 100%;
 }
 
 #welcome {
     font-family: arial;
     font-size: 30px;
-    text-align: center;
-    top: 0;
 }
 
 /* Header 'About Me' */
 .title {
     width: 100%; 
-    height: 150px;
+    height: auto;
     display: grid; 
     place-items: center;
+    background-color: var(--heading);
 }
 
 /* bubble section main div */
 .bubble-ctr {
     width: 100%;
-    height: 1900px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    background-color: aqua;
+    background-color: var(--body);
     align-items: center;
 }
 
@@ -65,7 +85,7 @@ ol {
 .bubble-card {
     height: 100%;
     width: 75%;
-    margin: 0 auto;
+    margin: 40px auto;
     display: flex;
     padding: 0%;
     align-items: center ;
@@ -73,57 +93,72 @@ ol {
     flex-direction: column;
 }
 
-.bubble-card>p {
-    position: relative;
-    bottom: 50px;
-}
-
 .bubble-card>ul {
     position: relative;
-    bottom: 120px;
+    bottom: 90px;
     padding: 5px 50px;
 }
 
 /* Bubbles! */
 .redcard {
-    width: 600px;
-    height: 600px;
+    width: var(--bsize);
+    height: var(--bsize);
+    min-width: var(--mbsize);
+    min-height: var(--mbsize);
     margin: 50px 35% 0 0;
-    background-color: lightcoral;
-    clip-path: circle(50%);
+    background-color: var(--b1color);
+    border-radius: 50%;
+    /* border-style: solid;
+    border-width: 4px;
+    border-color: black; */
     z-index: 6; 
 }
 
 .bluecard {
-    width: 600px;
-    height: 600px;
+    width: var(--bsize);
+    height: var(--bsize);
+    min-width: var(--mbsize);
+    min-height: var(--mbsize);
     margin: 0 0 0 45%;
-    background-color: lightcyan;
-    clip-path: circle(50%);
-    position: absolute;
-    top: 700px;
+    background-color: var(--b2color);
+    border-radius: 50%;
+    /* border-style: solid;
+    border-width: 4px;
+    border-color: black; */
+    position: relative;
+    top: -100px;
     z-index: 7;
 }
 
 .greencard {
-    width: 600px;
-    height: 600px;
+    width: var(--bsize);
+    height: var(--bsize);
+    min-width: var(--mbsize);
+    min-height: var(--mbsize);
     margin: 0 45% 0 0;
-    background-color: lightgreen;
-    clip-path: circle(50%);
-    position: absolute;
-    top: 1100px;
+    background-color: var(--b1color);
+    border-radius: 50%;
+    /* border-style: solid;
+    border-width: 4px;
+    border-color: black; */
+    position: relative;
+    top: -200px;
     z-index: 8;
 }
 
 .purplecard {
-    width: 600px;
-    height: 600px;
+    width: var(--bsize);
+    height: var(--bsize);
+    min-width: var(--mbsize);
+    min-height: var(--mbsize);
     margin: 0 0 0 45%;
-    background-color: purple;
-    clip-path: circle(50%);
-    position: absolute;
-    top: 1500px;
+    background-color: var(--b2color);
+    border-radius: 50%;
+    /* border-style: solid;
+    border-width: 4px;
+    border-color: black; */
+    position: relative;
+    top: -300px;
 }
 
 /* Top 10 */
@@ -134,7 +169,7 @@ ol {
     align-items: center;
     padding-top: 30px;
     height: auto;
-    background-color: rgb(197, 136, 255);
+    background-color: var(--top10);
 }
 
 .bandheading {
@@ -144,4 +179,26 @@ ol {
 
 .top10>ol {
     margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+
+.redcard {
+    margin: 20px 15% 0 0;
+}
+
+.bluecard {
+    margin: 0 0 0 20%;
+ 
+}
+
+.greencard {
+    margin: 0 15% 0 0;
+}
+
+.purplecard {
+    margin: 0 0 0 20%;
+}
+
+
 }
