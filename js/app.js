@@ -14,11 +14,9 @@ let rightAnswers= 0;
 function vhs() {
   let guess1 = prompt(q[0] + ' Yes or no?').toLowerCase();
   if (guess1 === 'yes' || guess1 === 'y' || guess1 === 'ye') {
-  //   console.log('you guessed right!');
     alert('you guessed right!');
     rightAnswers++;
   } else {
-  //   console.log('nice try...');
     alert('nice try...');
   }
 }
@@ -28,11 +26,9 @@ function height() {
   let guess2 = prompt(q[1] + ' Yes or no?').toLowerCase();
 
   if (guess2 === 'no' || guess2 === 'n') {
-  //   console.log('you guessed right!');
     alert('you guessed right!');
     rightAnswers++;
   } else {
-  //   console.log('nope, nice try...');
     alert('nope, nice try...');
   }
 }
@@ -42,11 +38,9 @@ function dog() {
   let guess3 = prompt(q[2] + ' Yes or no?').toLowerCase();
 
   if (guess3 === 'yes' || guess3 === 'y' || guess3 === 'ye') {
-  //   console.log('you guessed right!');
     alert('you guessed right!');
     rightAnswers++;
   } else {
-  //   console.log('nice try...');
     alert('nice try...');
   }
 }
@@ -56,11 +50,9 @@ function tv() {
   let guess4 = prompt(q[3] + ' Yes or no?').toLowerCase();
 
   if (guess4 === 'yes' || guess4 === 'y' || guess4 === 'ye') {
-  //   console.log('you guessed right!');
     alert('you guessed right!');
     rightAnswers++;
   } else {
-  //   console.log('nice try...');
     alert('nice try...');
   }
 }
@@ -70,11 +62,9 @@ function teeth() {
   let guess5 = prompt(q[4] + ' Yes or no?').toLowerCase();
 
   if (guess5 === 'yes' || guess5 === 'y' || guess5 === 'ye') {
-  //   console.log('you guessed right!');
     alert('you guessed right!');
     rightAnswers++;
   } else {
-  //   console.log('nice try...');
     alert('nice try...');
   }
 }
@@ -135,7 +125,7 @@ function gameTwo() {
     for (let j = 0; j < numAnswer2.length; j++) {
       //if a member of the array matches the guess, update correct variable and increment rightAnswers
       if (numAnswer2[j] === numGuess2) {
-        console.log('you got it!');
+        alert('you got it!');
         correct = true;
         rightAnswers++;
         break;
@@ -152,7 +142,6 @@ function gameTwo() {
   }
   //once it leaves the entire for loop, 'correct' is used to identify whether or not they were succesful in guessing the number.
   if (correct !== true) {
-    console.log('sorry you got it wrong');
     alert(`the correct answers were: ${numAnswer2}. You got a total of ${rightAnswers} questions right out of seven total`);
   }
 }
